@@ -59,6 +59,21 @@
     .lang-progress{
       animation: growWidthAnimation 0.6s ease-in-out forwards;
     }
+
+    [data-testid="card-bg"] {
+      fill: transparent;
+      stroke: transparent;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .header { fill: #58a6ff; }
+      .stat, .lang-name { fill: #c9d1d9; }
+    }
+
+    @media (prefers-color-scheme: light) {
+      .header { fill: #0969da; }
+      .stat, .lang-name { fill: #24292f; }
+    }
     
 
           
@@ -265,9 +280,8 @@
     </g>
   </g></g>
     </g>
-  
+
     </svg>
-  
+
         </g>
       </svg>
-    
