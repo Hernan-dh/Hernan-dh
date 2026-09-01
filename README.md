@@ -1,9 +1,16 @@
 ### Languages
 
-![Top Languages](./profile/top-langs.svg)
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile/top-langs-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./profile/top-langs-light.svg">
-  <img alt="Top Languages" src="./profile/top-langs-light.svg">
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Hernan-dh&amp;layout=compact&amp;theme=github_dark&amp;hide_border=true"
+  >
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Hernan-dh&amp;layout=compact&amp;theme=default&amp;hide_border=true"
+  >
+  <img
+    alt="Most used languages"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hernan-dh&amp;layout=compact"
+  >
 </picture>
