@@ -16,18 +16,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate Top Languages
+      - name: Generate Top Languages (dark)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8
-          path: profile/top-langs.svg
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&bg_color=00000000&border_color=00000000&title_color=58a6ff&text_color=c9d1d9
+          path: profile/top-langs-dark.svg
           token: ${{ secrets.GH_STATS_TOKEN }}
 
-      - name: Commit generated card
+      - name: Generate Top Languages (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&bg_color=00000000&border_color=00000000&title_color=0969da&text_color=24292f
+          path: profile/top-langs-light.svg
+          token: ${{ secrets.GH_STATS_TOKEN }}
+
+      - name: Commit generated cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/top-langs.svg
-          git diff --cached --quiet || git commit -m "Update Top Languages"
+          git add profile/*.svg
+          git diff --cached --quiet || git commit -m "Update Top Languages cards"
           git push
