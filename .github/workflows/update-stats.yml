@@ -32,6 +32,9 @@ jobs:
           path: profile/top-langs-light.svg
           token: ${{ secrets.GH_STATS_TOKEN }}
 
+      - name: Update default Top Languages card
+        run: cp profile/top-langs-light.svg profile/top-langs.svg
+
       - name: Commit generated cards
         run: |
           git config user.name "github-actions[bot]"
